@@ -5,15 +5,15 @@ import { FoundComponent } from './nopage-found/nopage-found/found.component';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: '**', component:FoundComponent}
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    PagesRoutingModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    PagesRoutingModule
   ],
   exports: [RouterModule]
 })

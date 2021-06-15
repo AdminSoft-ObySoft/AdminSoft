@@ -6,6 +6,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { ComponentsModule } from '../components/components.module';
 import { RouterModule } from '@angular/router';
+import { CategoriasComponent } from './categorias/categorias.component';
+import { UnidadesMedidasComponent } from './unidades-medidas/unidades-medidas.component';
 
 
 
@@ -14,7 +16,9 @@ import { RouterModule } from '@angular/router';
     DashboardComponent,
     UsuariosComponent,
     ProductosComponent,
-    PagesComponent
+    PagesComponent,
+    CategoriasComponent,
+    UnidadesMedidasComponent
   ],
 
   exports:[

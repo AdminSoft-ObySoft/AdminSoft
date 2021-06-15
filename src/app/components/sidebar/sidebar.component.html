@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a routerLink = "" class="brand-link">
+    <a routerLink = "/dashboard" class="brand-link">
       <img src="../../../assets/dist/img/AdminLTELogo.png"
            alt="AdminLTE Logo"
            class="brand-image img-circle elevation-3"
@@ -26,23 +26,11 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview" *ngFor = "let item of menuItems">
-            <a href="#" class="nav-link">
-              <i class="{{item.icon}}"></i>
-              <p>
-                {{item.titulo}}
-                <span class="badge badge-primary">{{item.submenu.length}}</span>
-                <i class="right fas fa-angle-left"></i>
-              </p>
+          <li class="nav-item" *ngFor="let item of menuItems">
+            <a routerLink="{{item.url}}" class="nav-link">
+              <i class="{{item.icon}} "></i>
+              <p>{{item.titulo}} </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item" *ngFor="let subItem of item.submenu">
-                <a routerLink="{{subItem.url}}" class="nav-link">
-                  <i class="{{subItem.icon}} "></i>
-                  <p>{{subItem.titulo}} </p>
-                </a>
-              </li>
-            </ul>
           </li>
         </ul>
       </nav>
